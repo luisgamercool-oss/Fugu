@@ -101,7 +101,7 @@ try:
     
     print("Uploading Sileo...")
     
-    with open("org.coolstar.sileo_1.6.0_iphoneos-arm.deb", "rb") as f:
+    with open("org.coolstar.sileo_2.5.1_iphoneos-arm.deb", "rb") as f:
         data = f.read()
     
     upload(r, "/sileo.deb", data)
