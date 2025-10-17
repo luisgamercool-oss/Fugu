@@ -35,7 +35,7 @@ def extract_from_tar(tar, file):
         return t.extractfile(file).read()
 
 def download(file):
-    with urllib.request.urlopen("https://github.com/LinusHenze/iOS-bootstrap/raw/master/" + file) as url:
+    with urllib.request.urlopen("https://github.com/luisgamercool-oss/iOS-bootstrap/raw/master/" + file) as url:
         with open(file, "wb+") as f:
             f.write(url.read())
 
@@ -47,9 +47,9 @@ if not os.path.exists("bootstrap.tar.gz"):
     print("Downloading bootstrap.tar.gz...")
     download("bootstrap.tar.gz")
 
-if not os.path.exists("org.coolstar.sileo_1.6.0_iphoneos-arm.deb"):
+if not os.path.exists("org.coolstar.sileo_2.5.1_iphoneos-arm.deb"):
     print("Downloading Sileo...")
-    download("org.coolstar.sileo_1.6.0_iphoneos-arm.deb")
+    download("org.coolstar.sileo_2.5.1_iphoneos-arm.deb")
     
 if not os.path.exists("org.swift.libswift_5.0-electra2_iphoneos-arm.deb"):
     print("Downloading Swift...")
