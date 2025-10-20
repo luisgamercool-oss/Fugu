@@ -55,17 +55,13 @@ if not os.path.exists("org.swift.libswift_5.0-electra2_iphoneos-arm.deb"):
     print("Downloading Swift...")
     download("org.swift.libswift_5.0-electra2_iphoneos-arm.deb")
     
-if not os.path.exists("cydia_2.3_iphoneos-arm.deb"):
-    print("Downloading Cydia Compatibility Package...")
-    download("cydia_2.3_iphoneos-arm.deb")
+
 
 if not os.path.exists("mobilesubstrate_0.9.7100~b4_iphoneos-arm.deb"):
     print("Downloading MobileSubstrate...")
     download("mobilesubstrate_0.9.7100~b4_iphoneos-arm.deb")
     
-if not os.path.exists("com.saurik.substrate.safemode_0.9.6003_iphoneos-arm.deb"):
-    print("Downloading Substrate Safemode...")
-    download("com.saurik.substrate.safemode_0.9.6003_iphoneos-arm.deb")
+
 
 print("Launching iproxy")
 
@@ -113,12 +109,7 @@ try:
     
     upload(r, "/swift.deb", data)
     
-    print("Uploading Cydia Compatibility Package...")
-    
-    with open("cydia_2.3_iphoneos-arm.deb", "rb") as f:
-        data = f.read()
-    
-    upload(r, "/cydia.deb", data)
+
     
     print("Uploading MobileSubstrate...")
     
@@ -127,12 +118,7 @@ try:
     
     upload(r, "/MobileSubstrate.deb", data)
     
-    print("Uploading Substrate Safemode...")
-    
-    with open("com.saurik.substrate.safemode_0.9.6003_iphoneos-arm.deb", "rb") as f:
-        data = f.read()
-    
-    upload(r, "/SafeMode.deb", data)
+
     
     print("Done uploading!")
     
