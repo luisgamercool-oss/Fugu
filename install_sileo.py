@@ -46,7 +46,7 @@ if not os.path.exists("tar"):
 if not os.path.exists("bootstrap.tar.gz"):
     print("Downloading bootstrap.tar.gz...")
     download("bootstrap.tar.gz")
-
+    
 if not os.path.exists("org.coolstar.sileo_2.5.1_iphoneos-arm.deb"):
     print("Downloading Sileo...")
     download("org.coolstar.sileo_2.5.1_iphoneos-arm.deb")
@@ -55,14 +55,10 @@ if not os.path.exists("org.swift.libswift_5.0-electra2_iphoneos-arm.deb"):
     print("Downloading Swift...")
     download("org.swift.libswift_5.0-electra2_iphoneos-arm.deb")
     
-
-
 if not os.path.exists("mobilesubstrate_0.9.7100~b4_iphoneos-arm.deb"):
     print("Downloading MobileSubstrate...")
     download("mobilesubstrate_0.9.7100~b4_iphoneos-arm.deb")
     
-
-
 print("Launching iproxy")
 
 # Run iproxy
@@ -109,16 +105,12 @@ try:
     
     upload(r, "/swift.deb", data)
     
-
-    
     print("Uploading MobileSubstrate...")
     
     with open("mobilesubstrate_0.9.7100~b4_iphoneos-arm.deb", "rb") as f:
         data = f.read()
     
     upload(r, "/MobileSubstrate.deb", data)
-    
-
     
     print("Done uploading!")
     
