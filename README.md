@@ -1,11 +1,7 @@
 # Fugu
 Fugu is the first open source jailbreak tool based on the checkm8 exploit.  
-    
-__UPDATE:__ Fugu will now install Sileo, SSH and Substitute automatically! Additionally, all changes to the root file system are now persistent. Put your iDevice into DFU mode, run `Fugu iStrap`, unlock your iDevice and follow the on-screen prompts.  
-__IMPORTANT:__ This jailbreak is currently in development and only meant to be used by developers.  
 
-# WARNING
-**!!! ONLY DOWNLOAD FUGU FROM [https://github.com/LinusHenze/Fugu](https://github.com/LinusHenze/Fugu) AS IT IS VERY EASY TO CREATE A VERSION OF FUGU THAT CONTAINS MALWARE !!!**
+__IMPORTANT:__ This jailbreak is currently in development and only meant to be used by developers.  
 
 # Supported Devices
 Currently, the iPad Pro (2017, every size) and iPhone 7 are the only officially supported devices (on iOS 13 - 13.5.1).  
@@ -31,8 +27,24 @@ _You may need to run this command multiple times. If it won't work after the 4th
 
 This will send iStrap (the kernel bootstrapper) to your iDevice together with iDownload (small application that can be used to upload files to the iDevice or execute commands). See _Components_ for more information.
 
-# Installing Sileo, SSH and Substitute
-**Fugu will now install Sileo, SSH and Substitute automatically!** Unlock your iDevice and follow the on-screen prompts. Make sure your iDevice is connected to the internet!
+# Installing Sileo, SSH and MobileSubstrate
+__IMPORTANT:__ All of this is highly experimental. Expect things to be broken.  
+
+Make sure you have `libusbmuxd` installed.  
+You can install it through Homebrew:
+```bash
+brew install libusbmuxd
+```
+After installing usbmuxd, boot your iDevice into jailbroken mode (e.g. `Fugu iStrap`) and unlock it afterwards.  
+Make sure it's still connected to your Mac via USB.  
+You can now install Sileo using:
+```bash
+python install_sileo.py
+```
+This will download all the necessary files to install Sileo and install it.  
+After the installation is done, you should see the Sileo Icon on your Homescreen.  
+Aditionally, SSH will be running now. __Make sure to change the root/mobile passwords!__  
+MobileSubstrate will be installed as well.
 
 # Components
 Fugu consists of the following components:
